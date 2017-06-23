@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J. Rangel, Software Developer</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <style>
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            display: none;
+        }
+
+        .header {
+            font-size: 51pt;
+            font-family: "Cormorant SC";
+            color: white;
+            margin-bottom: 0;
+            text-align: center;
+
+        }
+
+        .twoheader {
+            font-size: 26pt;
+            font-family: "Cormorant SC";
+
+            color: white;
+            text-align: center;
+            margin: auto;
+        }
+
+        a{
+            text-decoration: none;
+            color:white;
+        }
+        p {
+            color: white;
+            font-size: 1.4vw;
+            font-family: "Cormorant SC";
+            margin-bottom: 32px;
+        }
+
+        /*#aboutmeul {*/
+            /*color: white;*/
+            /*list-style: none;*/
+            /*font-family: "Cormorant SC";*/
+            /*font-size: 1.4vw;*/
+        /*}*/
+
+        /*#text {*/
+            /*font-size: 26pt;*/
+            /*font-family: "Cormorant SC";*/
+            /*color: white;*/
+            /*text-align: center;*/
+        /*}*/
+
+        /*.layers {*/
+            /*position: relative;*/
+            /*top: 0;*/
+            /*max-width: 1260px;*/
+            /*min-width: 320px;*/
+            /*height: 100vh;*/
+            /*margin: 0 auto;*/
+        /*}*/
+
+        /*.layer {*/
+            /*position: absolute;*/
+            /*top: 0;*/
+            /*left: 0;*/
+            /*width: 100%;*/
+            /*height: 100%;*/
+        /*}*/
+
+        /*.row {*/
+            /*display: flex;*/
+        /*}*/
+
+        /*.row__item {*/
+            /*flex-grow: 1;*/
+            /*flex-shrink: 1;*/
+            /*flex-basis: 0;*/
+
+            /*margin: @gutter;*/
+            /*padding: 10px 0;*/
+            /*text-align: center;*/
+            /*border: @border-size solid @color;*/
+            /*!*border-radius: 4px;*!*/
+            /*!*background: #fff;*!*/
+            /*margin-top: 30%;*/
+            /*color: white;*/
+            /*font-size: 40pt;*/
+
+        /*&*/
+        /*--double {*/
+            /*flex-grow: 2;*/
+            /*flex-shrink: 2;*/
+            /*flex-basis: 2 *@border-size +2 *@gutter;*/
+        /*}*/
+
+        /*}*/
+
+        #navbar {
+            font-family: Orbitron;
+            list-style: none;
+            color: white;
+            height: 8vh;
+            width: 100%;
+        }
+
+        .ontop {
+            position: relative;
+            z-index: 10;
+        }
+
+        ul.topnav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            /*background-color: skyblue;*/
+            background-color: black;
+        }
+
+        ul.topnav li {
+            float: left;
+            margin-right: 1%;
+            font-size: 1.2em;
+            margin-top: 0.5%;
+            margin-bottom: 0.1%;
+            margin-left: 2%;
+        }
+
+        /*ul.topnav li a {*/
+        /*display: block;*/
+        /*color: white;*/
+        /*text-align: center;*/
+        /*padding: 14px 16px;*/
+        /*text-decoration: none;*/
+        /*}*/
+
+        /*ul.topnav li a:hover:not(.active) {*/
+        /*!*background-color: #111;*!*/
+        /*}*/
+
+        /*ul.topnav li a.active {*/
+        /*!*background-color: #4CAF50;*!*/
+        /*}*/
+
+        ul.topnav li.right {
+            float: right;
+        }
+
+        #JSR {
+            font-family: Orbitron;
+            font-size: 1.5em;
+            position: fixed;
+            right: 1vw;
+            top: 0.3vw;
+            z-index: 10;
+
+        }
+
+        #menutab:hover {
+            color: deepskyblue;
+        }
+
+        #hometab {
+            display: none;
+        }
+
+        #hometab:hover {
+            color: deepskyblue;
+        }
+
+        #abouttab {
+            display: none;
+        }
+
+        #abouttab:hover {
+            color: deepskyblue;
+        }
+
+        #servicestab {
+            display: none;
+        }
+
+        #servicestab:hover {
+            color: deepskyblue;
+        }
+
+        #portfoliotab {
+            display: none;
+        }
+
+        #portfoliotab:hover {
+            color: deepskyblue;
+        }
+
+        #contacttab {
+            display: none;
+        }
+
+        #contacttab:hover {
+            color: deepskyblue;
+        }
+
+        .bg {
+            background: url("img/water-drops.gif");
+            background-size: cover;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -10;
+        }
+
+        #bgoverlay {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .4);
+        }
+
+        #homecontainer {
+            /*border: 2px solid yellow;*/
+        }
+
+        #homediv{
+            width:100%;
+            height: 89vh;
+        }
+
+        .bottom-bar {
+            position: relative;
+            text-align: center;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            background: transparent;
+            padding: 6vh 0 1vh 0;
+            color: white;
+            font-family: Orbitron;
+
+        }
+        h1{
+            font-family: "Cormorant SC";
+            color: white;
+            font-size: 24pt;
+        }
+        h3{
+            font-family: "Cormorant SC";
+            color: white;
+            font-size: 20pt;
+        }
+
+        .aboutmediv {
+            position: relative;
+            float: left;
+        }
+
+        .services {
+            border: 1px solid blue;
+            position: relative;
+            text-align:center;
+
+        }
+        #fedev {
+            height: 11.4em;
+            width: auto;
+        }
+        #bedev {
+            height: 15vw;
+            width: auto;
+        }
+        #custom {
+            height: 12.1vw;
+            width: auto;
+        }
+        #tools {
+            height: 11.3vw;
+            width: auto;
+        }
+
+        #phone {
+            height:5vw;
+        }
+        #email {
+            height:6vw;
+        }
+        #location {
+            height:6vw;
+        }
+        #contact {
+            text-align: center;
+        }
+
+
+
+        @media only screen  and (max-width: 737px) {
+            ul.topnav li.right,
+            ul.topnav li {
+                float: none;
+
+            }
+
+            p {
+                font-size: 6vw;
+                text-align: center;
+            }
+
+            .bottom-bar {
+                position: relative;
+                text-align: center;
+                text-transform: uppercase;
+                background: transparent;
+                padding: 1vh 0 1vh 0;
+                color: white;
+                font-family: Orbitron;
+                font-size: 3vw;
+            }
+
+            #JSR {
+                font-family: Orbitron;
+                font-size: 1.2em;
+                position: absolute;
+                right: 1vw;
+                top: 0.7vw;
+                z-index: 10;
+            }
+
+            #fedev {
+                height: 47vw;
+                width: auto;
+                padding:10px;
+            }
+            #bedev {
+                height: 54.5vw;
+                width: auto;
+
+            }
+            #custom {
+                height: 50vw;
+                width: auto;
+                padding:10px;
+            }
+            #tools {
+                height: 48vw;
+                width: auto;
+                padding:10px;
+            }
+            #phone {
+                height:7vw;
+            }
+            #email {
+                height:7vw;
+            }
+            #location {
+                height:7vw;
+            }
+
+
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="bg">
+    <div id="bgoverlay"></div>
+
+</div>
+
+
+<div id="navbar">
+
+    <ul class="topnav ontop">
+        <li class="ontop" id="menutab">MENU</li>
+        <li class="ontop" id="hometab">HOME</li>
+        <li class="ontop" id="abouttab">ABOUT</li>
+        <li class="ontop" id="servicestab">SERVICES</li>
+        <li class="ontop" id="portfoliotab">PORTFOLIO</li>
+        <li class="ontop" id="contacttab">CONTACT</li>
+    </ul>
+
+</div>
+<p id="JSR">JSR</p>
+
+<container id="homecontainer">
+
+
+    <div id="homediv" class="header col-lg-12">
+        <h1 style="margin-top:27.5vh" class="header" id="homeheader">JOSH RANGEL</h1>
+        <h1 class="twoheader" id="hometwoheader">Software Developer & Web Designer</h1>
+    </div>
+
+
+
+</container>
+
+
+<container class="container" id="aboutmecontainer">
+    <div class="col-sm-4 col-sm-4 col-md-6 col-md-6 col-lg-6 col-lg-6 aboutmediv animated" id="leftaboutmediv">
+        <h1 class="header" id="aboutmeheader"> ABOUT ME </h1>
+        <p>I'm a collaborative Full-Stack software developer with 4 years
+            management experience in the information technology field.
+            Passionate, detail oriented Veteran pursuing a career on a development team to solve problems for
+            clients.
+        </p>
+
+        <h1 class="header">Education</h1>
+
+
+        <p>
+            Codeup Graduate
+            <br>
+            Sixteen week intensive Full-stack software development course
+            <br>
+            Baylor University Graduate
+            <br>
+            B.A. Political Sciences, 2012
+        </p>
+
+
+        <!--<ul id="aboutmeul">Codeup Graduate-->
+        <!--<li > Sixteen week intensive Full-stack software-->
+        <!--development course-->
+        <!--</li>-->
+        <!--</ul>-->
+
+        <!--<ul id="aboutmeul">Baylor University Graduate-->
+        <!--<li > B.A. Political Sciences, 2012</li>-->
+        <!--</ul>-->
+
+        <h1 class="header">Why Me?</h1>
+        <p class="whymepara">I deeply enjoy software development. I'm a advocate of clean code and functional JavaScript.
+            I enjoy cracking the code and creating solutions to make lives easier. </p>
+    </div>
+
+
+    <div class="col-sm-4 col-sm-4 col-md-6 col-md-6 col-lg-6 col-lg-6 aboutmediv animated" id="rightaboutmediv">
+        <br>
+        <br>
+        <p>Native Texan. I was born in "San Antone", TX on a brisk spring day ready for BBQ.
+            I love southern hospitality, the Spurs and Sweet Tea.</p>
+
+
+        <p>Graduated from high school with top honors and titles, played multiple sports and earned the rank of
+            Eagle Scout in my teens.
+            Busy times but I wouldn't change a thing.</p>
+
+
+        <p>Became a Baylor Bear in the fall of 2008. Had the time of my life and met awesome people at this excellent
+            University.
+            Four years later, I graduated with my Political Science Degree being commissioned as a 2Lt in the US Air
+            Force.</p>
+
+
+        <p>Served this great country for 4 years in the Active Duty Air Force. Traveled to many great places and I
+            continue to serve in the active Reserves today. </p>
+
+        <p>Soon to graduate from this professional four-month intensive software development program and ready to
+            create products for your needs.</p>
+
+
+    </div>
+
+
+</container>
+
+
+<container class="container" id="servicescontainer">
+
+    <h1 id="servicesheader" class="header">Services</h1>
+    <div id="serviceslanguages" class="col-sm-3 services">
+
+        <h1 style="font-size: 23pt;">Front End Development</h1>
+        <img id="fedev" src="img/fedev.png">
+        <br>
+        <br>
+        <p> With HTML, CSS, JavaScript and JQuery, I create functional, user-friendly & aesthetically pleasing websites.</p>
+    </div>
+
+
+    <div id="serviceslanguages1" class="col-sm-3 services">
+        <h1 style="font-size: 24pt;">Back End Development</h1>
+
+        <img id="bedev" src="img/bedev.svg">
+
+        <p>Using Java, MySQL and Spring, I understand the programming language,
+        database & server architecture to enable
+        the front end experience.</p>
+    </div>
+
+    <div id="serviceslanguages2" class="col-sm-3 services">
+        <h1>Custom Design</h1>
+
+        <img id="custom" src="img/edit.svg">
+        <br>
+        <br>
+        <p>I'm too legit to quit.</p>
+    </div>
+
+    <div id="serviceslanguages3" class="col-sm-3 services">
+        <h1>IDEs & Tools</h1>
+
+        <img id="tools" src="img/adaptive.svg">
+        <br>
+        <br>
+        <p>Well versed with IntelliJ workframe.
+        </p>
+    </div>
+
+
+</container>
+
+
+<container class="container" id="portfoliocontainer">
+
+    <h1 class="header" id="portfolioheader">Latest Work</h1>
+
+
+    <div  id="portfoliodiv">
+
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="img/simon.png" alt="Simon app">
+                    <div class="carousel-caption">
+                        <h3>Simon Says</h3>
+                        <p>Custom browser based Simple Simon game application with CSS, HTML & JS</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/blessieportfolio.png" alt="Blessie Kurapati's site">
+                    <div class="carousel-caption">
+                        <h3>Blessie Kurapati</h3>
+                        <p>Custom website with CSS, HTML, JS and Credit Card API</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/Weathermap.png" alt="Weathermap app">
+                    <div class="carousel-caption">
+                        <h3>World-wide Weather Map</h3>
+                        <p style="font-size: 20pt;">Custom 3-day temperatures for anywhere with CSS, HTML, JS, Google Map API and the Open Weather Map API</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+
+    </div>
+
+
+</container>
+
+
+<!--5th page -->
+
+<container class="container" id="contactcontainer">
+
+
+    <div id="contact" class="col-md-12 animated">
+        <h1 class="header">GET IN TOUCH</h1>
+        <img id="phone" src="img/phone.svg">
+        <p style="margin-bottom: 0pt;" >PHONE NUMBER</p>
+        <p>210.834.8375</p>
+
+        <img id="email" src="img/email.svg">
+        <p style="margin-bottom: 0pt;"> EMAIL ADDRESS</p>
+        <a id="emailaddresslink" href="mailto:jsr7133@gmail.com"><p id="address">jsr7133@gmail.com</p></a>
+
+        <img id="location" src="img/location.svg">
+        <p style="margin-bottom: 0pt;"> LOCATION</p>
+        <p>San Antonio, Texas </p>
+
+    </div>
+
+
+</container>
+
+<div class="bottom-bar">
+    All Rights Reserved © 2017 - Josh Rangel | <a href="mailto:jsr7133@gmail.com" id="link">Email</a> | <a href="https://www.linkedin.com/in/jrangel7/" id="link">Linked In</a>
+</div>
+
+<!--SCRIPT-->
+
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+<!--External JS file-->
+<!--<script src="js/myFunctions.js"></script>-->
+
+<!-- Remember we do not encourage you to write in line JS -->
+<script>
+    (function () {
+        <!-- IFFE function -->
+
+
+//        fadein function for navbar
+
+//        $("#menutab").click(function () {
+//
+//            $("#hometab").fadeIn(1000);
+//            $("#abouttab").fadeIn(1200);
+//            $("#servicestab").fadeIn(1400);
+//            $("#portfoliotab").fadeIn(1600);
+//            $("#contacttab").fadeIn(1800);
+//
+//        });
+
+        $("#menutab").click(function () {
+
+            $("#hometab").fadeToggle(1000);
+            $("#abouttab").fadeToggle(1000);
+            $("#servicestab").fadeToggle(1000);
+            $("#portfoliotab").fadeToggle(1000);
+            $("#contacttab").fadeToggle(1000);
+
+        });
+
+
+//        pages actually changing
+
+        $("#hometab").click(function () {
+//
+            $("#homecontainer").fadeIn();
+            $('.bg').css(
+//                "background-image", "url(img/mountain.jpeg)"
+                "background-image", "url(img/leaf.gif)"
+            );
+            $("#aboutmecontainer").hide();
+            $("#servicescontainer").hide();
+            $("#portfoliocontainer").hide();
+            $("#contactcontainer").hide();
+            $("#hometab").toggle();
+            $("#abouttab").toggle();
+            $("#servicestab").toggle();
+            $("#portfoliotab").toggle();
+            $("#contacttab").toggle();
+        });
+
+        $("#abouttab").click(function () {
+            $('.bg').css(
+                "background-image", "url(img/glasses.jpg)"
+            );
+//            $("#transition").show(2000);
+//            $("#transition").hide();
+            $("#homecontainer").hide();
+            $("#aboutmecontainer").fadeIn();
+            $("#servicescontainer").hide();
+            $("#portfoliocontainer").hide();
+            $("#contactcontainer").hide();
+            $("#hometab").toggle();
+            $("#abouttab").toggle();
+            $("#servicestab").toggle();
+            $("#portfoliotab").toggle();
+            $("#contacttab").toggle();
+        });
+
+        $("#servicestab").click(function () {
+            $("#homecontainer").hide();
+            $("#aboutmecontainer").hide();
+            $("#servicescontainer").fadeIn();
+            $('.bg').css(
+                "background-image", "url(img/florence.jpg)"
+//                                                            florence
+            );
+            $("#portfoliocontainer").hide();
+            $("#contactcontainer").hide();
+            $("#hometab").toggle();
+            $("#abouttab").toggle();
+            $("#servicestab").toggle();
+            $("#portfoliotab").toggle();
+            $("#contacttab").toggle();
+        });
+
+        $("#portfoliotab").click(function () {
+            $("#homecontainer").hide();
+            $("#aboutmecontainer").hide();
+            $("#servicescontainer").hide();
+            $("#portfoliocontainer").fadeIn();
+            $('.bg').css(
+                "background-image", "url(img/pr2.jpg)"
+//                                                                       shadecomputer
+            );
+            $("#contactcontainer").hide();
+            $("#hometab").toggle();
+            $("#abouttab").toggle();
+            $("#servicestab").toggle();
+            $("#portfoliotab").toggle();
+            $("#contacttab").toggle();
+        });
+
+        $("#contacttab").click(function () {
+            $("#homecontainer").hide();
+            $("#aboutmecontainer").hide();
+            $("#servicescontainer").hide();
+            $("#portfoliocontainer").hide();
+            $("#contactcontainer").fadeIn();
+            $('.bg').css(
+                "background-image", "url(img/sa.jpg)"
+//            "background-image", "url(img/mountain.jpeg)"
+
+            );
+            $("#hometab").toggle();
+            $("#abouttab").toggle();
+            $("#servicestab").toggle();
+            $("#portfoliotab").toggle();
+            $("#contacttab").toggle();
+        });
+
+        $("#homeheader").addClass("animated fadeIn");
+        $("#hometwoheader").addClass("animated fadeIn");
+
+        $("#leftaboutmediv").addClass("fadeInLeftBig");
+        $("#aboutmeheader").addClass("animated fadeInLeft");
+        $("#rightaboutmediv").addClass("animated fadeInRightBig");
+
+
+        $("#servicesheader").addClass("animated fadeInDownBig");
+//        $("#servicesdiv").addClass("animated fadeInUpBig");
+        $("#serviceslanguages").addClass("animated fadeInUpBig");
+        $("#serviceslanguages1").addClass("animated fadeInUpBig");
+        $("#serviceslanguages2").addClass("animated fadeInUpBig");
+        $("#serviceslanguages3").addClass("animated fadeInUpBig");
+
+
+        $("#portfolioheader").addClass("animated fadeInDownBig");
+        $("#portfoliodiv").addClass("animated fadeInDownBig");
+
+
+        $("#contact").addClass("animated fadeInLeftBig");
+
+    })();
+</script>
+</body>
+</html>
