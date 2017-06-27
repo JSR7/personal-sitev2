@@ -31,7 +31,7 @@
         }
 
         .twoheader {
-            font-size: 26pt;
+            font-size: 22pt;
             font-family: "Cormorant SC";
 
             color: white;
@@ -42,6 +42,9 @@
         a{
             text-decoration: none;
             color:white;
+        }
+        a:hover {
+            color: deepskyblue;
         }
         p {
             color: white;
@@ -268,7 +271,7 @@
         }
 
         .services {
-            border: 1px solid blue;
+            /*border: 1px solid blue;*/
             position: relative;
             text-align:center;
 
@@ -288,6 +291,7 @@
         #tools {
             height: 11.3vw;
             width: auto;
+            /*margin-top: 3em;*/
         }
 
         #phone {
@@ -302,6 +306,37 @@
         #contact {
             text-align: center;
         }
+        .carousel-inner>.item>img {
+            line-height: 1;
+            width: 70vw;
+            margin: auto;
+        }
+        .carousel-indicators {
+            position: fixed;
+            left: 50%;
+            z-index: 15;
+            width: 60%;
+            padding-left: 0;
+            margin-left: -30%;
+            text-align: center;
+            list-style: none;
+        }
+
+        .carousel-control {
+            position: absolute;
+            top: 0;
+            bottom: -30vh;
+            left: 0;
+            width: 15%;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+            background-color: rgba(0, 0, 0, 0);
+            filter: alpha(opacity=50);
+            opacity: 0.5;
+            height: 71vh;
+        }
 
 
 
@@ -309,7 +344,12 @@
             ul.topnav li.right,
             ul.topnav li {
                 float: none;
+            }
 
+            .carousel-inner>.item>img {
+                line-height: 1;
+                width: 80vw;
+                margin: auto;
             }
 
             p {
@@ -325,7 +365,7 @@
                 padding: 1vh 0 1vh 0;
                 color: white;
                 font-family: Orbitron;
-                font-size: 3vw;
+                font-size: 1.2em;
             }
 
             #JSR {
@@ -402,7 +442,7 @@
 
 
     <div id="homediv" class="header col-lg-12">
-        <h1 style="margin-top:27.5vh" class="header" id="homeheader">JOSH RANGEL</h1>
+        <h1 style="margin-top:27.5vh;" class="header" id="homeheader">JOSH RANGEL</h1>
         <h1 class="twoheader" id="hometwoheader">Software Developer & Web Designer</h1>
     </div>
 
@@ -490,7 +530,7 @@
         <img id="fedev" src="img/fedev.png">
         <br>
         <br>
-        <p> With HTML, CSS, JavaScript and JQuery, I create functional, user-friendly & aesthetically pleasing websites.</p>
+        <p> With HTML, CSS, AJAX, JavaScript and JQuery, I create functional, user-friendly & aesthetically pleasing websites.</p>
     </div>
 
 
@@ -510,7 +550,7 @@
         <img id="custom" src="img/edit.svg">
         <br>
         <br>
-        <p>I'm too legit to quit.</p>
+        <p>If you're looking for a custom and one of a kind site, I can help. I have patience and determination to deliver what you need.</p>
     </div>
 
     <div id="serviceslanguages3" class="col-sm-3 services">
@@ -519,7 +559,7 @@
         <img id="tools" src="img/adaptive.svg">
         <br>
         <br>
-        <p>Well versed with IntelliJ workframe.
+        <p>Well versed with IntelliJ and Github tools.
         </p>
     </div>
 
